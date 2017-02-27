@@ -1,0 +1,45 @@
+<div>
+<div>
+<div><b>USING POPULATION ALLELE FREQUENCIES FOR COMPUTING INDIVIDUAL ADMIXTURE ESTIMATES: <br>
+<br>
+</b></div>
+Inference of ancestry is an important aspect of disease association studies as well as for understanding population history. We have developed a fast and accurate method for estimating the admixture proportions for an individual's ancestry using genotype or sequence data and population allele frequencies from a set of parental/reference populations. The method can work with genotype data or sequence data (aligned sequence reads in a BAM file) derived from low-coverage whole-genome sequencing, exome-sequencing or even targeted sequencing experiments. The method uses the<a href="http://www.ece.northwestern.edu/~nocedal/lbfgsb.html"> L-BFGS-B code </a>&nbsp;(a&nbsp;limited memory BFGS algorithm with bound constraints) for optimizing the likelihood function and is extremely fast. The program (binaries compiled for Linux x86_64) can be downloaded from attachments below. The current version of the program is iADMIX-v0.2.zip. The source code is available from&nbsp;<a href="https://github.com/vibansal/ancestry" style="background-color:rgb(255,255,255)">Github repository</a><br>
+<div></div>
+<br>
+</div>
+The method is described in the paper:<b> "Fast individual ancestry inference from DNA sequence data leveraging allele frequencies from multiple populations".</b> Vikas Bansal and Ondrej Libiger. (submitted) <br>
+<br>
+</div>
+<div>
+<div><b>INPUT:&nbsp;</b></div>
+<div><br>
+</div>
+<div>1. sorted BAM file for sequence data or simple genotype file (rsid genotype pairs) or PLINK files (.ped and .map)&nbsp;</div>
+<div>2. population allele frequencies for common SNPs (generated using HapMap3 genotypes or other genotype datasets)&nbsp;</div>
+<div><br>
+</div>
+<div><b>OUTPUT: &nbsp;</b><span style="background-color:transparent;font-size:1em;line-height:1.5">admixture coefficients for each reference population for each individual&nbsp;</span></div>
+<div><br>
+</div>
+<div><b style="font-size:1em;line-height:1.5;background-color:transparent">Running the program:&nbsp;</b></div>
+<div><br>
+</div>
+<div>
+<div>Example for genotype file: python runancestry.py --freq hapmap3.allchroms.shared.matrix --geno HGDP01254.genotypes --out HGDP12054.ancestry</div>
+<div>Example for bam file: python runancestry.py --freq hapmap3.allchroms.shared.matrix --bam HGDP01254.sorted.bam --out HGDP12054.ancestry</div>
+<div>Example for plink genotype file: python runancestry.py --freq hapmap3.allchroms.shared.matrix --plink HGDP01254.genotypes (ped/map) --out HGDP12054.ancestry</div>
+<div><span style="font-size:1em;line-height:1.5;background-color:transparent"><br>
+</span></div>
+<div><b>Sample input files and allele frequency files:</b></div>
+</div>
+<div><b><br>
+</b></div>
+<div><b>hapmap3.8populations.hg18.zip </b>is a file with the allele frequencies for 8 HapMap populations that has been used for most of the analysis in the paper referenced above. It should be unzipped and can be used as input to the iAdmix program. The same file is also available with hg19 coordinates for the SNPs.&nbsp;</div>
+<div><br>
+</div>
+<div>A sample genotype file (sample.genotypes.bz2) is also available. It should be unzipped using bzip.&nbsp;</div>
+<div>
+<div><br>
+</div>
+</div>
+</div>
