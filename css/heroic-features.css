@@ -30,3 +30,6 @@ img.intro {
 	height: 22em;
 	width: 100%;
 }
+.jumbotron.small p {
+	font-size: 19px;
+}
