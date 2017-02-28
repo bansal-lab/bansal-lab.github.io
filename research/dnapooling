@@ -1,0 +1,52 @@
+<div><span style="color:rgb(61,133,198)"><font size="3"><b>DNA pooling based association studies</b></font></span><br>
+</div>
+<div><br>
+The contribution of rare variants to phenotypic variation can be effectively surveyed through large-scale population re-sequencing studies. The availability of high-throughput target capture methods combined with the massive throughput of next-generation sequencing platforms has made it possible to interrogate thousands of genomic loci in a cost effective manner. In fact, the costs are so low that when one factors only the price to run the sequencer and the production of raw base reads, it is feasible to sequence megabases of DNA in thousands of individuals using a small number of sequencing runs. The budgetary bottleneck for such studies is not the sequencing cost but the cost of sample preparation for each individual sample prior to sequencing. Assuming that it costs ~200 dollars for target capture and library preparation, the sample preparation cost for a project with 2000 individuals alone would be $400,000.&nbsp; A simple strategy to reduce the per-sample cost while utilizing the massive capacity of current sequencers is to use DNA pooling prior to target capture and sample preparation.&nbsp; However, design and analysis of pooled DNA sequencing based association studies poses new challenges starting from variant calling and ending at association analysis. We have developed a number of tools for analyzing sequence data from pooled association studies and have applied these tools to association studies to studies for number of diseases including anorexia nervosa, type 2 diabetes and ALS.&nbsp;</div>
+<div><br>
+</div>
+<div><img border="0" height="166" src="poolseq-flow1.jpg" style="display:inline;margin:5px 10px 0px 0px;float:left" width="200">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img border="0" height="189" src="poolseq.png" style="display:inline;margin:5px 0px 0px 10px;text-align:center" width="400"></div>
+<div><br>
+</div>
+<div><br>
+</div>
+<div>1.&nbsp;<b>accurate variant detection and genotyping (both rare and common variants) from pooled sequence data:</b>&nbsp;We have developed a statistical method, CRISP, that uses sequence data from multiple DNA pools to accurately detect rare variants. This method was first presented at the ISMB (Intelligent Systems for Molecular Biology Conference) in 2010 &nbsp;and has been continuously updated and improved ever since.&nbsp;<span style="font-size:1em;line-height:1.5;background-color:transparent">A software implementation of CRISP is available for </span><a href="https://sites.google.com/site/vibansal/software/crisp" style="font-size:1em;line-height:1.5">download</a><span style="font-size:1em;line-height:1.5;background-color:transparent"> and source code is available from </span><a href="https://github.com/vibansal/crisp" style="font-size:1em;line-height:1.5">Github</a><span style="font-size:1em;line-height:1.5;background-color:transparent">.</span></div>
+<div><br>
+</div>
+<div>2. A<b>ssociation analysis for rare and common variants from pooled sequencing data: </b>We have implemented methods for&nbsp;rare variant association analysis such as a simple burden test, SKAT, RareCover and Calpha. The pipeline also implements the Fisher's exact test for single variants. Source code and documentation is available on <a href="https://github.com/vibansal/RV-pooled">Github</a>.<br>
+<br>
+</div>
+<div>3.&nbsp;<b>correction for population stratification or detection of ancestry outliers</b>: We have developed an efficient method to estimate ancestry from aligned sequence reads that can also work with low-coverage sequence data as well as pooled sequencing experiments. This method is available <a href="https://sites.google.com/site/vibansal/software/iAdmix">here</a>&nbsp;</div>
+<div><br>
+</div>
+<div><b style="font-size:1em;line-height:1.5;background-color:transparent">Sequencing study for type 2 diabetes&nbsp;</b></div>
+<div><b><br>
+</b></div>
+<div>In collaboration with researchers at the University of Ulm, Germany and Sanofi-Aventis, we have sequenced ~140 genes in more than 6800 individuals with and without type 2 diabetes. The individuals were sequenced in pools of size 20 or 24. Analysis of the sequence data has identified several very rare variants (minor allele frequency &lt; 0.002) that show association with type 2 diabetes.&nbsp;</div>
+<div>
+<div style="font-size:13.3333px"><font size="2"><span style="font-family:arial,sans-serif"><br>
+</span></font></div>
+</div>
+<div><br>
+</div>
+<div>
+<div style="font-size:13.3333px"><b>References:</b></div>
+<div style="font-size:13.3333px"><b><br>
+</b></div>
+<div style="font-size:13.3333px">Bansal V. et al.<b>&nbsp;</b><b style="color:rgb(0,0,0);font-family:Times New Roman;font-size:medium;line-height:normal;background-color:transparent">Targeted sequencing of genes associated with type 2 diabetes in 6800 individuals. American Socieity of Human Genetics meeting, 2014 (<a href="http://www.ashg.org/2014meeting/abstracts/fulltext/f140122299.htm" style="background-image:url(&quot;&quot;)">poster</a>)</b></div>
+<div style="font-size:13.3333px"><b><br>
+</b></div>
+<div style="font-size:13.3333px"><span style="font-size:13.3333px">Scott-Van Zeeland AA, Bloss C, Tewhey C, Bansal V, et al “</span><a href="http://www.nature.com/mp/journal/vaop/ncurrent/full/mp201391a.html" rel="nofollow" style="font-size:13.3333px;background-image:url(&quot;&quot;);background-color:rgb(255,255,255)">Evidence for the Role of EPHX2 gene variants in Anorexia Nervosa</a><span style="font-size:13.3333px">”.&nbsp;&nbsp; Molecular&nbsp; Psychiatry, 2013&nbsp;</span></div>
+<div style="font-size:13.3333px"><b><br>
+</b></div>
+<div style="font-size:13.3333px">
+<div style="font-size:13.3333px"><span style="font-size:1em;line-height:1.5">Bansal V, Tewhey R, Leproust EM, Schork NJ.&nbsp;</span><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3068187/pdf/pone.0018353.pdf" rel="nofollow" style="font-size:1em;line-height:1.5;background-image:url(&quot;&quot;)">Efficient and cost effective population resequencing by pooling and in-solution hybridization</a><span style="font-size:1em;line-height:1.5">. PLoS One. 2011 Mar 30;6(3):e18353.&nbsp;</span></div>
+</div>
+<div style="font-size:13.3333px"><span style="font-size:1em;line-height:1.5"><br>
+</span></div>
+<div style="font-size:13.3333px">
+<div>Bansal V.&nbsp;<a href="http://bioinformatics.oxfordjournals.org/content/26/12/i318.long" rel="nofollow" style="background-image:url(&quot;&quot;)">A statistical method for the detection of variants from next-generation resequencing of DNA pools</a>. Bioinformatics. 2010 Jun&nbsp;15;26(12):i318-24. [<a href="https://sites.google.com/site/vibansal/software/crisp" style="background-image:url(&quot;&quot;);background-color:rgb(255,255,255)">CRISP</a>]</div>
+</div>
+</div>
+<div><br>
+<br>
+</div>
