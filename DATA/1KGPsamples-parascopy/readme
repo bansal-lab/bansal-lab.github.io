@@ -1,0 +1,10 @@
+
+
+Parascopy copy number results for 167 loci (coding LCRs) across 2504 1000 genomes project samples
+===================================================================================================
+
+The 2504 samples were divided into 5 groups (EUR, AFR, SAS, EAS, AMR) according to their continental population for analysis. The CN output is summarized in the files *.samples.bed.gz. The format of this file is described here: https://github.com/tprodanov/parascopy/blob/main/docs/cn_output.md#copy-number-profiles
+
+167LCRs_coding.bed.gz: list of genomic intervals analyzed using Parascopy 
+
+Reference: Prodanov, T. & Bansal, V. Robust and accurate estimation of paralog-specific copy number for duplicated genes using whole-genome sequencing. Nature Communications 13, 3221 (2022). https://doi.org/10.1038/s41467-022-30930-3
